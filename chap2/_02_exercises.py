@@ -1,4 +1,3 @@
-import math
 # 练习1：
 # 尝试在交互模式(interactive mode)中制造一些错误
 # n = 42是合法的。输入 42 = n 会怎样？
@@ -16,5 +15,13 @@ print()
 
 print(24.95 * 0.4 * 60 + 3 + .75 * 59)
 
-# 如果我在6:52离开家，然后慢跑1里（8:15 每里），然后再跑3里(7:12每里)和1里的慢跑，我应该在什么时候才回到家吃早餐。
+# 如果我在6:52am离开家，然后慢跑1里（8:15 每里），然后再跑3里(7:12 每里)和1里的慢跑，我应该在什么时候才回到家吃早餐。
 
+begin = 6 * 60 * 60 + 52 * 60
+easy_pace = 8 * 60 + 15
+tempo_pace = 7 * 60 + 12
+total = begin + easy_pace * 2 + tempo_pace * 3
+hour = total // (60 * 60)
+minute = total % (60 * 60)
+second = total % (60 * 60)
+print(hour, minute, second)
